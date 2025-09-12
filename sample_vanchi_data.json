@@ -1,0 +1,20 @@
+[
+  {
+    "vanchiCode": "V001",
+    "vanchiName": "Vanchi One",
+    "vanchiNumber": "VN001",
+    "vanchiSno": 1,
+    "comments": "First vanchi entry",
+    "createdBy": "admin",
+    "isActive": "1"
+  },
+  {
+    "vanchiCode": "V002",
+    "vanchiName": "Vanchi Two",
+    "vanchiNumber": "VN002",
+    "vanchiSno": 2,
+    "comments": "Second vanchi entry",
+    "createdBy": "admin",
+    "isActive": "1"
+  }
+]

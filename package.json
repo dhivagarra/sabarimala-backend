@@ -1,0 +1,85 @@
+{
+  
+  "name": "swami_project",
+  
+  "version": "1.0.0",
+  
+  "main": "index.js",
+  
+  "scripts": {
+  
+    
+  "start": "ts-node src/index.ts",
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1"
+  
+  },
+  
+  "keywords": [],
+  
+  "author": "",
+  
+  "license": "ISC",
+  
+  "description": "",
+  
+  "dependencies": {
+  
+    
+  "@types/uuid": "^10.0.0",
+  
+    
+  "bcrypt": "^6.0.0",
+  
+    
+  "cors": "^2.8.5",
+  
+    
+  "dotenv": "^17.2.1",
+  
+    
+  "express": "^5.1.0",
+  
+    
+  "morgan": "^1.10.1",
+  
+    
+  "mssql": "^11.0.1",
+  
+    
+  "uuid": "^11.1.0",
+  
+    
+  "winston": "^3.17.0"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "@types/bcrypt": "^6.0.0",
+  
+    
+  "@types/cors": "^2.8.19",
+  
+    
+  "@types/express": "^5.0.3",
+  
+    
+  "@types/morgan": "^1.9.10",
+  
+    
+  "@types/mssql": "^9.1.7",
+  
+    
+  "@types/node": "^24.3.0",
+  
+    
+  "ts-node": "^10.9.2",
+  
+    
+  "typescript": "^5.9.2"
+  
+  }
+}

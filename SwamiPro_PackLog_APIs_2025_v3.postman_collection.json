@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "swami-packlog-apis-2025-v3",
+    "name": "Swami PackLog APIs v3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for Swami PackLog API endpoints as of September 2025, with SQL-formatted date fields."
+  },
+  "item": [
+    {
+      "name": "Create Pack Log",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sealDT\": \"2025-09-05 10:00:00\",\n  \"transNo\": \"T123\",\n  \"nada\": \"N1\",\n  \"vanchi\": \"V1\",\n  \"vanchiNo\": \"VN1\",\n  \"bagno\": \"B1\",\n  \"sealBy\": \"User1\",\n  \"receDT\": \"2025-09-05 12:00:00\",\n  \"receBy\": \"User2\",\n  \"packStatus\": \"Sealed\",\n  \"comments\": \"Test\",\n  \"createdBy\": \"Admin\",\n  \"isActive\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", ""]
+        }
+      }
+    },
+    {
+      "name": "Get All Pack Logs",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", ""]
+        }
+      }
+    },
+    {
+      "name": "Get Pack Logs by Date",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/date/2025-09-05",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", "date", "2025-09-05"]
+        }
+      }
+    },
+    {
+      "name": "Get Pack Logs by Date Range",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/range?start=2025-09-01&end=2025-09-05",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", "range"],
+          "query": [
+            { "key": "start", "value": "2025-09-01" },
+            { "key": "end", "value": "2025-09-05" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Pack Log by transNo",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/transno/T123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", "transno", "T123"]
+        }
+      }
+    },
+    {
+      "name": "Update Pack Log by transNo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"packStatus\": \"Received\",\n  \"receBy\": \"User3\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/transno/T123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", "transno", "T123"]
+        }
+      }
+    },
+    {
+      "name": "Delete Pack Log by transNo",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/packlog/transno/T123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "packlog", "transno", "T123"]
+        }
+      }
+    }
+  ]
+}

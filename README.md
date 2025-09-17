@@ -1,20 +1,24 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Node.js + TypeScript + Express + PostgreSQL (AWS RDS)
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Setup
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1. Copy `.env.example` to `.env` and fill in your actual AWS PostgreSQL credentials.
+2. Install dependencies:
+   ```
+npm install
+   ```
+3. Build and run the server (development):
+   ```
+npx ts-node src/index.ts
+   ```
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code betters. 
+## Environment Variables
+- `PORT`: Port for Express server (default: 3000)
+- `DB_HOST`: AWS RDS PostgreSQL hostname
+- `DB_PORT`: PostgreSQL port (default: 5432)
+- `DB_USER`: Database username
+- `DB_PASSWORD`: Database password
+- `DB_NAME`: Database name
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Test Database Connection
+Visit `http://localhost:3000/db` after starting the server to verify DB connectivity.
